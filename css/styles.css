@@ -1,0 +1,100 @@
+body {
+    /* background-attachment: fixed; */
+    background-image: url("./Images/BackgroundImageHome.jpg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
+    width: 100%;
+}
+
+h1, p{
+    color: black;
+    margin: 5%;
+}
+
+h1{
+    font-size: 5vw;
+}
+
+h4, p{
+    font-size: 2vw;
+}
+
+.container{
+    text-align: center;
+    width: 100%;
+}
+
+.navbar {
+    font-size: 1.5vw;
+}
+
+.nav-link {
+    color: #0a8d7d;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;
+    }
+    h4, p {
+        font-size: 4vw;
+    }
+}
+
+#ourstory{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageOurStory.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
+}
+
+#outstoryimg{
+    width: 100%;
+}
+
+.ourstoryp{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
+}
+
+#directions{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageDirections.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
+}
+
+#accommodation{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageAccommodation.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
+}
+
+ul{
+    color: black;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+#accommodationlist{
+    list-style: none;
+    text-align: left;
+}
