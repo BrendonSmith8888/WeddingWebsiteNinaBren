@@ -59,7 +59,7 @@ h4, p{
     padding-top: 5rem;
 }
 
-#outstoryimg{
+#ourstoryimg{
     width: 100%;
 }
 
@@ -97,4 +97,8 @@ ul{
 #accommodationlist{
     list-style: none;
     text-align: left;
+}
+
+#accommodationimg{
+    width: 100%;
 }
