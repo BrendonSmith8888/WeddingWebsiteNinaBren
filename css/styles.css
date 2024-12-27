@@ -1,11 +1,7 @@
-body {
-    /* background-attachment: fixed; */
-    background-image: url("./Images/BackgroundImageHome.jpg");
-    /* background-position: center; */
+body{
+    background: #e7eaeb;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #0a8d7d;
-    font-family: 'Times New Roman', Times, serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -15,11 +11,20 @@ body {
 
 h1, p{
     color: black;
+    margin: 3%;
+}
+
+#mainmargin{
+    color: black;
     margin: 5%;
 }
 
 h1{
     font-size: 5vw;
+}
+
+h3{
+    font-size: 3vw;
 }
 
 h4, p{
@@ -31,12 +36,9 @@ h4, p{
     width: 100%;
 }
 
-.navbar {
-    font-size: 1.5vw;
-}
-
 .nav-link {
     color: #0a8d7d;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
@@ -44,9 +46,18 @@ h4, p{
     h1 {
         font-size: 8vw;
     }
-    h4, p {
+    h3, h4, p {
         font-size: 4vw;
     }
+}
+#mainpage {
+    background-image: url("./Images/BackgroundImageHome.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+    width: 100%;
 }
 
 #ourstory{
@@ -54,18 +65,21 @@ h4, p{
     background-image: url("../css/Images/BackgroundImageOurStory.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: #0a8d7d;
     margin: 0;
     padding: 0;
     padding-top: 5rem;
 }
 
-#ourstoryimg{
-    width: 100%;
-}
-
-.ourstoryp{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5vw;
+#celebrate{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageCelebrate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
 }
 
 #directions{
@@ -73,9 +87,7 @@ h4, p{
     background-image: url("../css/Images/BackgroundImageDirections.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0;
-    padding: 0;
-    padding-top: 5rem;
+    color: #0a8d7d;
 }
 
 #accommodation{
@@ -83,9 +95,45 @@ h4, p{
     background-image: url("../css/Images/BackgroundImageAccommodation.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0;
-    padding: 0;
-    padding-top: 5rem;
+    color: #0a8d7d;
+}
+
+#additionalinfo{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageAdditionalInfo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+}
+
+#presence{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImagePresence.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+}
+
+#ourstoryimg{
+    width: 100%;
+}
+
+#celebrateimg{
+    margin-top: 30%;
+    width: 100%;
+}
+
+#presenceimg{
+    width: 100%;
+}
+
+#presencerow{
+    margin-top: 5%;
+}
+
+.ourstoryp{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
 }
 
 ul{
