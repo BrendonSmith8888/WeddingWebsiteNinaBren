@@ -114,6 +114,30 @@ h4, p{
     color: #0a8d7d;
 }
 
+#rsvp{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageRSVP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+}
+
+#menu{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageMenu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+}
+
+#songrequest{
+    background: #e7eaeb;
+    background-image: url("../css/Images/BackgroundImageSongRequests.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0a8d7d;
+}
+
 #ourstoryimg{
     width: 100%;
 }
@@ -125,6 +149,14 @@ h4, p{
 
 #presenceimg{
     width: 100%;
+}
+
+#rsvpimg{
+    width: 100%;
+}
+
+#songrequestimg{
+    width: 40%;
 }
 
 #presencerow{
@@ -149,4 +181,14 @@ ul{
 
 #accommodationimg{
     width: 100%;
+}
+
+.menulistheading{
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+.menulist{
+    font-size: 1.2vw;
+    font-style: italic;
 }
