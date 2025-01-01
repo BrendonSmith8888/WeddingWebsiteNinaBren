@@ -9,26 +9,19 @@ $("#rsvpBtn").on("click", function () {
     let song = $("#songChoice").val();
     let meal = $("#mealList").val();
     $.ajax({
-      url: "php/addGuest.php",
+      url: "../php/addGuest.php",
       type: "POST",
       data: {
         name: name,
         email: email,
-        songChoice: song,
-        meal: meal,
+        song: song,
+        mealList: meal,
       },
       dataType: "json",
       success: function (response) {
-        if (response.status === "success" && response.data) {
-          let person = response.data;
-          $("#personnelTableBody").append(`
-              <tr>
-                <td class="align-middle text-nowrap">${guest.name}</td>
-                <td class="align-middle text-nowrap d-none d-md-table-cell">${guest.email}</td>
-                <td class="align-middle text-nowrap d-none d-md-table-cell">${guest.song}</td>
-                <td class="align-middle text-nowrap d-none d-md-table-cell">${guest.meal}</td>
-              </tr>
-            `);
+        if (response.status === "success") {
+          let guest = response.data;
+          console.log(guest);
         } else {
           console.log(response);
           console.error(
@@ -36,6 +29,7 @@ $("#rsvpBtn").on("click", function () {
             response.error || "Unknown error"
           );
         }
+        $("#rsvpModal").modal("hide");
       },
       error: function (jqXHR, textStatus, errorThrown) {
         console.error("AJAX error:", textStatus, errorThrown);
