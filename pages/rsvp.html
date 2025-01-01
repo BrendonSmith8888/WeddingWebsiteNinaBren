@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <title>RSVP</title>
 </head>
+
 <body>
     <section id="rsvp">
         <div class="container">
@@ -16,7 +18,7 @@
                 <div class="col align-items-center">
                     <h2>We can’t wait to celebrate with you!</h2>
                     <p>We kindly request your response by May 6, 2025.</p>
-                    <button>RSVP Now</button>
+                    <button id="rsvpBtn" type="button" class="btn btn-primary">RSVP Now</button>
                 </div>
                 <div class="col align-items-center">
                     <img id="rsvpimg" src="../css/Images/rsvp.jpg" alt="RSVP Image">
@@ -30,11 +32,14 @@
                 <div class="col align-items-center">
                     <h3>MENU</h3>
                     <h4 class="menulistheading">Option 1</h4>
-                    <p class="menulist">Slow cooked lamb shank on bed of creamy potato mash, drizzled with rosematy jus, with seasonal vegetables</p>
+                    <p class="menulist">Slow cooked lamb shank on bed of creamy potato mash, drizzled with rosematy jus,
+                        with seasonal vegetables</p>
                     <h4 class="menulistheading">Option 2</h4>
-                    <p class="menulist">Parmesan crumbed chicken roulade served on creamy potato mash with seasonal vegetables & cream chive sauce.</p>
+                    <p class="menulist">Parmesan crumbed chicken roulade served on creamy potato mash with seasonal
+                        vegetables & cream chive sauce.</p>
                     <h4 class="menulistheading">Option 3 - Veg</h4>
-                    <p class="menulist">A Mediterranean one-pot casserole with fresh vegetables, apricots, chickpeas, served with a lentil fritter & parsley garnish</p>
+                    <p class="menulist">A Mediterranean one-pot casserole with fresh vegetables, apricots, chickpeas,
+                        served with a lentil fritter & parsley garnish</p>
                 </div>
                 <div class="col align-items-center">
                     <p>Please indicate on the reply form what meal option you would like.</p>
@@ -49,8 +54,56 @@
             </div>
         </div>
     </section>
-    <script src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <div id="rsvpModal" class="modal fade" tabindex="-1" data-bs-backdrop="false" data-bs-keyboard="false"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content shadow">
+                <div class="modal-header bg-primary bg-gradient text-white">
+                    <h5 class="modal-title">RSVP Submission</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="rsvpForm">
+                        <input type="hidden" id="rsvpID">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="rsvpName" placeholder="Full Name" required>
+                            <label for="addFirstName">Full Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email address"
+                                required>
+                            <label for="addEmailAddress">Email Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="songChoice" placeholder="Song Choice" required>
+                            <label for="addJobTitle">Song Choice</label>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select" id="mealList" placeholder="Meal Options" required>
+                                <option value="">--Select Meal--</option>
+                                <option value="1">Option 1 - Lamb</option>
+                                <option value="2">Option 2 - Chicken</option>
+                                <option value="3">Option 3 - Veg</option>
+                            </select>
+                            <label for="meals">Meal Options</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="rsvpBtn" type="submit" form="rsvpForm"
+                        class="btn btn-outline-primary btn-sm myBtn">SUBMIT</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm myBtn"
+                        data-bs-dismiss="modal">CANCEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
+
 </html>
