@@ -7,18 +7,44 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Forum&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../css/Icons/favicon.ico" type="image/x-icon">
     <title>RSVP</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./ourstory.html">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./directions.html">Directions & Accommodations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./additionalinfo.html">Additional Info</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <section id="rsvp">
         <div class="container">
-            <h4>N&B</h4>
+            <h4 id="mainh4">N&B</h4>
             <div class="row justify-content-center">
                 <div class="col align-items-center">
                     <h2>We can’t wait to celebrate with you!</h2>
                     <p>We kindly request your response by May 6, 2025.</p>
-                    <button id="rsvpBtn" type="button" class="btn btn-primary">RSVP Now</button>
+                    <button id="rsvpBtn" type="button">RSVP Now</button>
                 </div>
                 <div class="col align-items-center">
                     <img id="rsvpimg" src="../css/Images/rsvp.jpg" alt="RSVP Image">
@@ -70,23 +96,108 @@
                             <input type="text" class="form-control" id="rsvpName" placeholder="Full Name" required>
                             <label for="addFirstName">Full Name</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email address"
-                                required>
-                            <label for="addEmailAddress">Email Address</label>
+                        <div class="mb-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="attending" class="form-check-input" id="attendingYes"
+                                    value="Yes"> Yes
+                            </label>
+                            <label class="form-check-label">
+                                <input type="radio" name="attending" class="form-check-input" id="attendingNo"
+                                    value="No"> No
+                            </label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="songChoice" placeholder="Song Choice" required>
-                            <label for="addJobTitle">Song Choice</label>
-                        </div>
-                        <div class="form-floating">
-                            <select class="form-select" id="mealList" placeholder="Meal Options" required>
-                                <option value="">--Select Meal--</option>
-                                <option value="1">Option 1 - Lamb</option>
-                                <option value="2">Option 2 - Chicken</option>
-                                <option value="3">Option 3 - Veg</option>
-                            </select>
-                            <label for="meals">Meal Options</label>
+                        <div id="additionalFields">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Email address"
+                                    required>
+                                <label for="addEmailAddress">Email Address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="songChoice" placeholder="Song Choice"
+                                    required>
+                                <label for="addSongChoice">Song Choice</label>
+                            </div>
+                            <div class="form-floating">
+                                <select class="form-select" id="mealList" placeholder="Meal Options" required>
+                                    <option value="">--Select Meal--</option>
+                                    <option value="L">Option 1 - Lamb</option>
+                                    <option value="C">Option 2 - Chicken</option>
+                                    <option value="V">Option 3 - Veg</option>
+                                </select>
+                                <label for="meals">Meal Options</label>
+                            </div>
+                            <div class="form-floating">
+                                <select class="form-select" name="extraguests" id="numberList" placeholder="Number Options" required>
+                                    <option value="">--Select Number--</option>
+                                    <option id="extra1" value="1">1</option>
+                                    <option id="extra2" value="2">2</option>
+                                    <option id="extra3" value="3">3</option>
+                                </select>
+                                <label for="meals">Submitting for other guests?</label>
+                            </div>
+                            <div id="additionalSubmissions1">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="rsvpName1" placeholder="Full Name" required>
+                                    <label for="addFirstName1">Full Name</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="songChoice1" placeholder="Song Choice"
+                                        required>
+                                    <label for="addSongChoice1">Song Choice</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="mealList1" placeholder="Meal Options" required>
+                                        <option value="">--Select Meal--</option>
+                                        <option value="L">Option 1 - Lamb</option>
+                                        <option value="C">Option 2 - Chicken</option>
+                                        <option value="V">Option 3 - Veg</option>
+                                    </select>
+                                    <label for="meals">Meal Options</label>
+                                </div>
+                            </div>
+                            <div id="additionalSubmissions2">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="rsvpName2" placeholder="Full Name" required>
+                                    <label for="addFirstName1">Full Name</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="songChoice2" placeholder="Song Choice"
+                                        required>
+                                    <label for="addSongChoice2">Song Choice</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="mealList2" placeholder="Meal Options" required>
+                                        <option value="">--Select Meal--</option>
+                                        <option value="L">Option 1 - Lamb</option>
+                                        <option value="C">Option 2 - Chicken</option>
+                                        <option value="V">Option 3 - Veg</option>
+                                    </select>
+                                    <label for="meals">Meal Options</label>
+                                </div>
+                            </div>
+                            <div id="additionalSubmissions3">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="rsvpName3" placeholder="Full Name" required>
+                                    <label for="addFirstName3">Full Name</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="songChoice3" placeholder="Song Choice"
+                                        required>
+                                    <label for="addSongChoice3">Song Choice</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="mealList3" placeholder="Meal Options" required>
+                                        <option value="">--Select Meal--</option>
+                                        <option value="L">Option 1 - Lamb</option>
+                                        <option value="C">Option 2 - Chicken</option>
+                                        <option value="V">Option 3 - Veg</option>
+                                    </select>
+                                    <label for="meals">Meal Options</label>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -99,7 +210,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
