@@ -1,55 +1,29 @@
-// $("#rsvpBtn").on("click", function () {
-//       $("#rsvpModal").modal("show");
-//   });
-
-//   $("#rsvpForm").on("submit", function (e) {
-//     e.preventDefault();
-//     let name = $("#rsvpName").val();
-//     let email = $("#email").val();
-//     let song = $("#songChoice").val();
-//     let meal = $("#mealList").val();
-//     $.ajax({
-//       url: "../php/addGuest.php",
-//       type: "POST",
-//       data: {
-//         name: name,
-//         email: email,
-//         song: song,
-//         mealList: meal,
-//       },
-//       dataType: "json",
-//       success: function (response) {
-//         if (response.status === "success") {
-//           let guest = response.data;
-//           console.log(guest);
-//         } else {
-//           console.log(response);
-//           console.error(
-//             "No data found or an error occurred:",
-//             response.error || "Unknown error"
-//           );
-//         }
-//         $("#rsvpModal").modal("hide");
-//       },
-//       error: function (jqXHR, textStatus, errorThrown) {
-//         console.error("AJAX error:", textStatus, errorThrown);
-//         console.log("Response text:", jqXHR.responseText);
-//       },
-//     });
-//   });
-
 $(document).ready(function () {
   $("#rsvpBtn").on("click", function () {
     $("#rsvpModal").modal("show");
   });
+});
 
-  $("input[name='attending']").on("change", function () {
-    if ($("#attendingYes").is(":checked")) {
-      $("#additionalFields").slideDown();
-    } else {
-      $("#additionalFields").slideUp();
+$("#attending").on("change", function () {
+  let attendingvalue = $(this).val();
+  if (attendingvalue === "Yes") {
+    $("#additionalFields").slideDown();
+    for(let i=1; i<=3;i++){
+      $(`#rsvpName${i}`).prop("disabled", true);
+      $(`#mealList${i}`).prop("disabled", true);
+      $(`#attending${i}`).prop("disabled", true);
     }
-  });
+  } else {
+    $("#additionalFields").slideUp();
+    $("#email").val("X@delete.com");
+    $("#mealList").val("X");
+    $("#songChoice").val("X");
+    for(let i=1; i<=3;i++){
+      $(`#rsvpName${i}`).prop("disabled", true);
+      $(`#mealList${i}`).prop("disabled", true);
+      $(`#attending${i}`).prop("disabled", true);
+    }
+  }
 });
 
 $("#numberList").on("change", function () {
@@ -57,32 +31,66 @@ $("#numberList").on("change", function () {
   for (let i = 1; i <= 3; i++) {
     if (i <= selectedValue) {
       $(`#additionalSubmissions${i}`).slideDown();
+      $(`#rsvpName${i}`).prop("disabled", false);
+      $(`#mealList${i}`).prop("disabled", false);
+      $(`#attending${i}`).prop("disabled", false);
     } else {
       $(`#additionalSubmissions${i}`).slideUp();
+      $(`#rsvpName${i}`).val("X");
+      $(`#attending${i}`).val("X");
+      $(`#songChoice${i}`).val("X");
+      $(`#mealList${i}`).val("X");
     }
   }
 });
 
 $("#rsvpForm").on("submit", function (e) {
   e.preventDefault();
+  let attending = $("#attending").val();
   let name = $("#rsvpName").val();
   let email = $("#email").val();
   let song = $("#songChoice").val();
   let meal = $("#mealList").val();
-
+  let additionalguests = $("#numberList").val();
+  let attending1 = $("#attending1").val();
+  let name1 = $("#rsvpName1").val();
+  let song1 = $("#songChoice1").val();
+  let meal1 = $("#mealList1").val();
+  let attending2 = $("#attending2").val();
+  let name2 = $("#rsvpName2").val();
+  let song2 = $("#songChoice2").val();
+  let meal2 = $("#mealList2").val();
+  let attending3 = $("#attending3").val();
+  let name3 = $("#rsvpName3").val();
+  let song3 = $("#songChoice3").val();
+  let meal3 = $("#mealList3").val();
   $.ajax({
     url: "../php/addGuest.php",
     type: "POST",
     data: {
+      attending: attending,
       name: name,
       email: email,
       song: song,
       mealList: meal,
+      additionalguests: additionalguests,
+      attending1: attending1,
+      name1: name1,
+      song1: song1,
+      mealList1: meal1,
+      attending2: attending2,
+      name2: name2,
+      song2: song2,
+      mealList2: meal2,
+      attending3: attending3,
+      name3: name3,
+      song3: song3,
+      mealList3: meal3,
     },
     dataType: "json",
     success: function (response) {
       if (response.status === "success") {
-        console.log("Guest added:", response.data);
+        // console.log("Guest added:", response.data);
       } else {
         console.error("Error:", response.message);
       }

@@ -97,14 +97,12 @@
                             <label for="addFirstName">Full Name</label>
                         </div>
                         <div class="mb-3">
-                            <label class="form-check-label">
-                                <input type="radio" name="attending" class="form-check-input" id="attendingYes"
-                                    value="Yes"> Yes
-                            </label>
-                            <label class="form-check-label">
-                                <input type="radio" name="attending" class="form-check-input" id="attendingNo"
-                                    value="No"> No
-                            </label>
+                            <label for="attending">Attending</label>
+                            <select class="form-select" id="attending" placeholder="Attending Options" required>
+                                <option value="">--Select Yes/No--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>                        
                         </div>
                         <div id="additionalFields">
                             <div class="form-floating mb-3">
@@ -113,8 +111,7 @@
                                 <label for="addEmailAddress">Email Address</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="songChoice" placeholder="Song Choice"
-                                    required>
+                                <input type="text" class="form-control" id="songChoice" placeholder="Song Choice">
                                 <label for="addSongChoice">Song Choice</label>
                             </div>
                             <div class="form-floating">
@@ -123,12 +120,13 @@
                                     <option value="L">Option 1 - Lamb</option>
                                     <option value="C">Option 2 - Chicken</option>
                                     <option value="V">Option 3 - Veg</option>
+                                    <option value="X" hidden>Option 4 - X</option>
                                 </select>
                                 <label for="meals">Meal Options</label>
                             </div>
                             <div class="form-floating">
-                                <select class="form-select" name="extraguests" id="numberList" placeholder="Number Options" required>
-                                    <option value="">--Select Number--</option>
+                                <select class="form-select" name="extraguests" id="numberList" placeholder="Number Options">
+                                    <option value="0">--Select Number--</option>
                                     <option id="extra1" value="1">1</option>
                                     <option id="extra2" value="2">2</option>
                                     <option id="extra3" value="3">3</option>
@@ -140,10 +138,15 @@
                                     <input type="text" class="form-control" id="rsvpName1" placeholder="Full Name" required>
                                     <label for="addFirstName1">Full Name</label>
                                 </div>
-
+                                <label for="attending1">Attending</label>
+                                <select class="form-select" id="attending1" placeholder="Attending Options" required>
+                                    <option value="">--Select Yes/No--</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="X" hidden>X</option>
+                                </select>      
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="songChoice1" placeholder="Song Choice"
-                                        required>
+                                    <input type="text" class="form-control" id="songChoice1" placeholder="Song Choice">
                                     <label for="addSongChoice1">Song Choice</label>
                                 </div>
                                 <div class="form-floating">
@@ -152,6 +155,7 @@
                                         <option value="L">Option 1 - Lamb</option>
                                         <option value="C">Option 2 - Chicken</option>
                                         <option value="V">Option 3 - Veg</option>
+                                        <option value="X" hidden>Option 4 - X</option>
                                     </select>
                                     <label for="meals">Meal Options</label>
                                 </div>
@@ -159,12 +163,18 @@
                             <div id="additionalSubmissions2">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="rsvpName2" placeholder="Full Name" required>
-                                    <label for="addFirstName1">Full Name</label>
+                                    <label for="addFirstName2">Full Name</label>
                                 </div>
-
+                                <label for="attending2">Attending</label>
+                                <select class="form-select" id="attending2" placeholder="Attending Options" required>
+                                    <option value="">--Select Yes/No--</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="X" hidden>X</option>
+                                    
+                                </select>      
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="songChoice2" placeholder="Song Choice"
-                                        required>
+                                    <input type="text" class="form-control" id="songChoice2" placeholder="Song Choice">
                                     <label for="addSongChoice2">Song Choice</label>
                                 </div>
                                 <div class="form-floating">
@@ -173,6 +183,7 @@
                                         <option value="L">Option 1 - Lamb</option>
                                         <option value="C">Option 2 - Chicken</option>
                                         <option value="V">Option 3 - Veg</option>
+                                        <option value="X" hidden>Option 4 - X</option>
                                     </select>
                                     <label for="meals">Meal Options</label>
                                 </div>
@@ -182,10 +193,15 @@
                                     <input type="text" class="form-control" id="rsvpName3" placeholder="Full Name" required>
                                     <label for="addFirstName3">Full Name</label>
                                 </div>
-
+                                <label for="attending3">Attending</label>
+                                <select class="form-select" id="attending3" placeholder="Attending Options" required>
+                                    <option value="">--Select Yes/No--</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="X" hidden>X</option>
+                                </select>      
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="songChoice3" placeholder="Song Choice"
-                                        required>
+                                    <input type="text" class="form-control" id="songChoice3" placeholder="Song Choice">
                                     <label for="addSongChoice3">Song Choice</label>
                                 </div>
                                 <div class="form-floating">
@@ -194,6 +210,7 @@
                                         <option value="L">Option 1 - Lamb</option>
                                         <option value="C">Option 2 - Chicken</option>
                                         <option value="V">Option 3 - Veg</option>
+                                        <option value="X" hidden>Option 4 - X</option>
                                     </select>
                                     <label for="meals">Meal Options</label>
                                 </div>
