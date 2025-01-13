@@ -55,31 +55,18 @@ if($additionalguests == 0){
     
     echo json_encode(['status' => 'success', 'message' => 'Guest added successfully']);
 } elseif($additionalguests == 1){
-    if (!$name1 || !$attending1 || !$song1 || !$meal1) {
-        http_response_code(400);
-        echo json_encode(['status' => 'error', 'message' => 'Missing required fields']);
-        exit;
-    }
-    $insertQuery = "INSERT INTO guests (name, attending, email, song,  meal) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($insertQuery);
-    $stmt->bind_param("sssss", $name, $attending, $email, $song, $meal);
+    $sql1 = "INSERT INTO guests (name, attending, email, song, meal) VALUES ('$name', '$attending', '$email', '$song', '$meal')";
+    $sql2 = "INSERT INTO guests (name, attending, email, song, meal) VALUES ('$name1', '$attending1', '$email', '$song1', '$meal1')";
 
-    $insertQuery1 = "INSERT INTO guests (name, attending, email, song,  meal) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($insertQuery1);
-    
-    if (!$stmt) {
-        echo json_encode(['status' => 'error', 'message' => 'Failed to prepare statement']);
-        exit;
+    if (mysqli_query($conn, $sql1)) {
+        if (mysqli_query($conn, $sql2)) {
+            echo json_encode(['status' => 'success', 'message' => 'Both guests added successfully']);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => "ERROR: Could not execute second query. " . mysqli_error($conn)]);
+        }
+    } else {
+        echo json_encode(['status' => 'error', 'message' => "ERROR: Could not execute first query. " . mysqli_error($conn)]);
     }
-    
-    $stmt->bind_param("sssss", $name1, $attending1, $email, $song1, $meal1);
-    
-    if (!$stmt->execute()) {
-        echo json_encode(['status' => 'error', 'message' => 'Database error: ' . $stmt->error]);
-        exit;
-    }
-    
-    echo json_encode(['status' => 'success', 'message' => 'Guest and Guest 1 added successfully']);
 } elseif($additionalguests == 2){
     if (!$name2 || !$attending2 || !$song2 || !$meal2) {
         http_response_code(400);
@@ -146,6 +133,6 @@ if($additionalguests == 0){
     
     echo json_encode(['status' => 'success', 'message' => 'Guest added successfully']);
 }
-$stmt->close();
+// $stmt->close();
 $conn->close();
 ?>

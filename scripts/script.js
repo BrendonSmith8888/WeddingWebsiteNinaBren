@@ -2,47 +2,101 @@ $(document).ready(function () {
   $("#rsvpBtn").on("click", function () {
     $("#rsvpModal").modal("show");
   });
-});
 
-$("#attending").on("change", function () {
-  let attendingvalue = $(this).val();
-  if (attendingvalue === "Yes") {
-    $("#additionalFields").slideDown();
-    for(let i=1; i<=3;i++){
-      $(`#rsvpName${i}`).prop("disabled", true);
-      $(`#mealList${i}`).prop("disabled", true);
-      $(`#attending${i}`).prop("disabled", true);
-    }
-  } else {
-    $("#additionalFields").slideUp();
-    $("#email").val("X@delete.com");
-    $("#mealList").val("X");
-    $("#songChoice").val("X");
-    for(let i=1; i<=3;i++){
-      $(`#rsvpName${i}`).prop("disabled", true);
-      $(`#mealList${i}`).prop("disabled", true);
-      $(`#attending${i}`).prop("disabled", true);
-    }
-  }
-});
-
-$("#numberList").on("change", function () {
-  let selectedValue = parseInt($(this).val()) || 0;
-  for (let i = 1; i <= 3; i++) {
-    if (i <= selectedValue) {
-      $(`#additionalSubmissions${i}`).slideDown();
-      $(`#rsvpName${i}`).prop("disabled", false);
-      $(`#mealList${i}`).prop("disabled", false);
-      $(`#attending${i}`).prop("disabled", false);
+  $("#attending").on("change", function () {
+    let attendingvalue = $(this).val();
+    if (attendingvalue === "Yes") {
+      $("#additionalFields").slideDown();
+      for(let i=1; i<=3;i++){
+        $(`#rsvpName${i}`).prop("disabled", true);
+        $(`#mealList${i}`).prop("disabled", true);
+        $(`#attending${i}`).prop("disabled", true);
+      }
     } else {
-      $(`#additionalSubmissions${i}`).slideUp();
-      $(`#rsvpName${i}`).val("X");
-      $(`#attending${i}`).val("X");
-      $(`#songChoice${i}`).val("X");
-      $(`#mealList${i}`).val("X");
+      $("#additionalFields").slideUp();
+      $("#email").val("X@delete.com");
+      $("#mealList").val("X");
+      $("#songChoice").val("X");
+      for(let i=1; i<=3;i++){
+        $(`#rsvpName${i}`).prop("disabled", true);
+        $(`#mealList${i}`).prop("disabled", true);
+        $(`#attending${i}`).prop("disabled", true);
+      }
     }
-  }
+  });
+
+  $("#attending1").on("change", function () {
+    let attendingvalue = $(this).val();
+    if (attendingvalue === "No") { 
+      $("#songChoiceWrapper1").slideUp();
+      $("#mealListWrapper1").slideUp();
+      $("#mealList1").val("X");
+      $("#songChoice1").val("X");
+    }
+    else{
+      $("#songChoiceWrapper1").slideDown();
+      $("#mealListWrapper1").slideDown();
+      $("#mealList1").val("");
+      $("#songChoice1").val(""); 
+    }
+  });
+
+  $("#attending2").on("change", function () {
+    let attendingvalue = $(this).val();
+    if (attendingvalue === "No") { 
+      $("#songChoiceWrapper2").slideUp();
+      $("#mealListWrapper2").slideUp();
+      $("#mealList2").val("X");
+      $("#songChoice2").val("X");
+    }
+    else{
+      $("#songChoiceWrapper2").slideDown();
+      $("#mealListWrapper2").slideDown();
+      $("#mealList2").val("");
+      $("#songChoice2").val(""); 
+    }
+  });
+
+  $("#attending3").on("change", function () {
+    let attendingvalue = $(this).val();
+    if (attendingvalue === "No") { 
+      $("#songChoiceWrapper3").slideUp();
+      $("#mealListWrapper3").slideUp();
+      $("#mealList3").val("X");
+      $("#songChoice3").val("X");
+    }
+    else{
+      $("#songChoiceWrapper3").slideDown();
+      $("#mealListWrapper3").slideDown();
+      $("#mealList3").val("");
+      $("#songChoice3").val(""); 
+    }
+  });
+
+  $("#numberList").on("change", function () {
+    let selectedValue = parseInt($(this).val()) || 0;
+    for (let i = 1; i <= 3; i++) {
+      if (i <= selectedValue) {
+        $(`#additionalSubmissions${i}`).slideDown();
+        $(`#rsvpName${i}`).prop("disabled", false);
+        $(`#mealList${i}`).prop("disabled", false);
+        $(`#attending${i}`).prop("disabled", false);
+      } else {
+        $(`#additionalSubmissions${i}`).slideUp();
+        $(`#rsvpName${i}`).val("X");
+        $(`#attending${i}`).val("X");
+        $(`#songChoice${i}`).val("X");
+        $(`#mealList${i}`).val("X");
+      }
+    }
+  });
 });
+
+
+
+
+
+
 
 $("#rsvpForm").on("submit", function (e) {
   e.preventDefault();
