@@ -11,16 +11,20 @@ $(document).ready(function () {
         $(`#rsvpName${i}`).prop("disabled", true);
         $(`#mealList${i}`).prop("disabled", true);
         $(`#attending${i}`).prop("disabled", true);
+        $(`#fridayevening${i}`).prop("disabled", true);
       }
     } else {
       $("#additionalFields").slideUp();
       $("#email").val("X@delete.com");
       $("#mealList").val("X");
       $("#songChoice").val("X");
+      $("#fridayevening").val("X");
+      $("#allergies").val("X");
       for(let i=1; i<=3;i++){
         $(`#rsvpName${i}`).prop("disabled", true);
         $(`#mealList${i}`).prop("disabled", true);
         $(`#attending${i}`).prop("disabled", true);
+        $(`#fridayevening${i}`).prop("disabled", true);
       }
     }
   });
@@ -30,14 +34,22 @@ $(document).ready(function () {
     if (attendingvalue === "No") { 
       $("#songChoiceWrapper1").slideUp();
       $("#mealListWrapper1").slideUp();
+      $("#fridayeveningWrapper1").slideUp();
+      $("#allergiesWrapper1").slideUp();
       $("#mealList1").val("X");
       $("#songChoice1").val("X");
+      $("#fridayevening1").val("X");
+      $("#allergies1").val("X");
     }
     else{
       $("#songChoiceWrapper1").slideDown();
       $("#mealListWrapper1").slideDown();
+      $("#fridayeveningWrapper1").slideDown();
+      $("#allergiesWrapper1").slideDown();
       $("#mealList1").val("");
-      $("#songChoice1").val(""); 
+      $("#songChoice1").val("");
+      $("#fridayevening1").val("");
+      $("#allergies1").val(""); 
     }
   });
 
@@ -46,14 +58,22 @@ $(document).ready(function () {
     if (attendingvalue === "No") { 
       $("#songChoiceWrapper2").slideUp();
       $("#mealListWrapper2").slideUp();
+      $("#fridayeveningWrapper2").slideUp();
+      $("#allergiesWrapper2").slideUp();
       $("#mealList2").val("X");
       $("#songChoice2").val("X");
+      $("#fridayevening2").val("X");
+      $("#allergies2").val("X");
     }
     else{
       $("#songChoiceWrapper2").slideDown();
       $("#mealListWrapper2").slideDown();
+      $("#fridayeveningWrapper2").slideDown();
+      $("#allergies2").slideDown();
       $("#mealList2").val("");
-      $("#songChoice2").val(""); 
+      $("#songChoice2").val("");
+      $("#fridayevening2").val("");
+      $("#allergies2").val("");  
     }
   });
 
@@ -62,14 +82,22 @@ $(document).ready(function () {
     if (attendingvalue === "No") { 
       $("#songChoiceWrapper3").slideUp();
       $("#mealListWrapper3").slideUp();
+      $("#fridayeveningWrapper3").slideUp();
+      $("#allergiesWrapper3").slideUp();
       $("#mealList3").val("X");
       $("#songChoice3").val("X");
+      $("#fridayevening3").val("X");
+      $("#allergies3").val("X");
     }
     else{
       $("#songChoiceWrapper3").slideDown();
       $("#mealListWrapper3").slideDown();
+      $("#fridayeveningWrapper3").slideDown();
+      $("#allergies3").slideDown();
       $("#mealList3").val("");
-      $("#songChoice3").val(""); 
+      $("#songChoice3").val("");
+      $("#fridayevening3").val("");
+      $("#allergies3").val(""); 
     }
   });
 
@@ -81,22 +109,19 @@ $(document).ready(function () {
         $(`#rsvpName${i}`).prop("disabled", false);
         $(`#mealList${i}`).prop("disabled", false);
         $(`#attending${i}`).prop("disabled", false);
+        $(`#fridayevening${i}`).prop("disabled", false);
       } else {
         $(`#additionalSubmissions${i}`).slideUp();
         $(`#rsvpName${i}`).val("X");
         $(`#attending${i}`).val("X");
         $(`#songChoice${i}`).val("X");
         $(`#mealList${i}`).val("X");
+        $(`#fridayevening${i}`).val("X");
+        $(`#allergies${i}`).val("X");
       }
     }
   });
 });
-
-
-
-
-
-
 
 $("#rsvpForm").on("submit", function (e) {
   e.preventDefault();
