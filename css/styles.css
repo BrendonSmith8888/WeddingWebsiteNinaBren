@@ -75,6 +75,7 @@ h4, p{
         font-size: 2vw;
     }
 }
+
 #mainpage {
     background-color: #e7eaeb;
     background-image: url("./Images/BackgroundImageHome.jpg");
@@ -161,6 +162,11 @@ h4, p{
     background-repeat: no-repeat;
     background-size: cover;
     color: #0a8d7d;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 5rem;
+    width: 100%;
 }
 
 #ourstoryimg{
@@ -249,10 +255,16 @@ ul{
     color: #e7eaeb;
 }
 
-#footerBtn{
-    font-size: 1vw;
+#tyBtn{
+    width: 7%;
+}
+
+#tyLink{
+    background-color: #e7eaeb;
     color: #0a8d7d;
-    width: 40%;
+    font-size: 1vw;
+    text-decoration: none;
+    width: 100%;
 }
 
 
