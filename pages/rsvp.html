@@ -84,9 +84,9 @@
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content shadow">
-                <div class="modal-header bg-primary bg-gradient text-white">
+                <div class="modal-header" id="formheader">
                     <h5 class="modal-title">RSVP Submission</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    <button type="button" id="headerclose" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -96,172 +96,201 @@
                             <input type="text" class="form-control" id="rsvpName" placeholder="Full Name" required>
                             <label for="addFirstName">Full Name</label>
                         </div>
-                        <div class="mb-3">
-                            <label for="attending">Attending</label>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email address"
+                                required>
+                            <label for="addEmailAddress">Email Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
                             <select class="form-select" id="attending" placeholder="Attending Options" required>
                                 <option value="">--Select Yes/No--</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
-                            </select>                        
+                            </select>
+                            <label for="attending">Attending</label>
                         </div>
                         <div id="additionalFields">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="email" placeholder="Email address"
-                                    required>
-                                <label for="addEmailAddress">Email Address</label>
+                                <input type="text" class="form-control" id="songChoice"
+                                    placeholder="Please input Song Title and Artist">
+                                <label for="addSongChoice">Song Choice (Song Title & Artist)</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="songChoice" placeholder="Please input Song Title and Artist">
-                                <label for="addSongChoice">Song Choice</label>
-                            </div>
-                            <div class="form-floating">
                                 <select class="form-select" id="mealList" placeholder="Meal Options" required>
                                     <option value="">--Select Meal--</option>
                                     <option value="L">Option 1 - Lamb</option>
                                     <option value="C">Option 2 - Chicken</option>
                                     <option value="V">Option 3 - Veg</option>
-                                    <option value="K">Option 4 - Kid's Meal</option>                                    
+                                    <option value="K">Option 4 - Kid's Meal</option>
                                     <option value="X" hidden>X</option>
                                 </select>
                                 <label for="meals">Meal Options</label>
                             </div>
-                            <select class="form-select" id="fridayevening" placeholder="Friday Evening braai" required>
-                                <option value="">--Select Yes/No--</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="allergies" placeholder="Any allergies we need to be aware of">
-                                <label for="addAllergies">Allergies</label>
-                            </div>  
-                            <div class="form-floating">
-                                <select class="form-select" name="extraguests" id="numberList" placeholder="Number Options">
-                                    <option value="0">--Select Number--</option>
-                                    <option id="extra1" value="1">1</option>
-                                    <option id="extra2" value="2">2</option>
-                                    <option id="extra3" value="3">3</option>
+                            <div class="form-floating mb-3" id="fridayeveningWrapper">
+                                <select class="form-select" id="fridayevening" placeholder="Friday Evening braai"
+                                    required>
+                                    <option value="">--Select Yes/No--</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="X" hidden>X</option>
                                 </select>
-                                <label for="meals">Submitting for other guests?</label>
+                                <label for="fridayevening">Friday Evening braai</label>
                             </div>
-                            <div id="additionalSubmissions1">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="rsvpName1" placeholder="Full Name" required>
-                                    <label for="addFirstName1">Full Name</label>
-                                </div>
-                                <label for="attending1">Attending</label>
+                            <div class="form-floating mb-3" id="allergiesWrapper">
+                                <input type="text" class="form-control" id="allergies"
+                                    placeholder="Any allergies or notes you want us to be aware of">
+                                <label for="addAllergies">Allergies / Additional Notes</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" name="extraguests" id="numberList" placeholder="Number Options">
+                                <option value="0">--Select Number--</option>
+                                <option id="extra1" value="1">1</option>
+                                <option id="extra2" value="2">2</option>
+                                <option id="extra3" value="3">3</option>
+                            </select>
+                            <label for="meals">Submitting for other guests?</label>
+                        </div>
+                        <div id="additionalSubmissions1">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="rsvpName1" placeholder="Full Name" required>
+                                <label for="addFirstName1">Guest 1 - Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
                                 <select class="form-select" id="attending1" placeholder="Attending Options" required>
                                     <option value="">--Select Yes/No--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                     <option value="X" hidden>X</option>
-                                </select>      
-                                <div class="form-floating mb-3" id="songChoiceWrapper1">
-                                    <input type="text" class="form-control" id="songChoice1" placeholder="Song Choice">
-                                    <label for="addSongChoice1">Song Choice</label>
-                                </div>
-                                <div class="form-floating" id="mealListWrapper1">
-                                    <select class="form-select" id="mealList1" placeholder="Meal Options" required>
-                                        <option value="">--Select Meal--</option>
-                                        <option value="L">Option 1 - Lamb</option>
-                                        <option value="C">Option 2 - Chicken</option>
-                                        <option value="V">Option 3 - Veg</option>
-                                        <option value="K">Option 4 - Kid's Meal</option>
-                                        <option value="X" hidden>X</option>
-                                    </select>
-                                    <label for="meals">Meal Options</label>
-                                </div>
-                                <select class="form-select" id="fridayevening1" placeholder="Friday Evening braai" required>
+                                </select>
+                                <label for="attending1">Attending</label>
+                            </div>
+                            <div class="form-floating mb-3" id="songChoiceWrapper1">
+                                <input type="text" class="form-control" id="songChoice1" placeholder="Song Choice">
+                                <label for="addSongChoice1">Song Choice</label>
+                            </div>
+                            <div class="form-floating mb-3" id="mealListWrapper1">
+                                <select class="form-select" id="mealList1" placeholder="Meal Options" required>
+                                    <option value="">--Select Meal--</option>
+                                    <option value="L">Option 1 - Lamb</option>
+                                    <option value="C">Option 2 - Chicken</option>
+                                    <option value="V">Option 3 - Veg</option>
+                                    <option value="K">Option 4 - Kid's Meal</option>
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="meals">Meal Options</label>
+                            </div>
+                            <div class="form-floating mb-3" id="fridayeveningWrapper1">
+                                <select class="form-select" id="fridayevening1" placeholder="Friday Evening braai"
+                                    required>
                                     <option value="">--Select Yes/No--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
-                                </select> 
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="allergies1" placeholder="Any allergies we need to be aware of">
-                                    <label for="addAllergies">Allergies</label>
-                                </div>   
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="fridayevening1">Friday Evening braai</label>
                             </div>
-                            <div id="additionalSubmissions2">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="rsvpName2" placeholder="Full Name" required>
-                                    <label for="addFirstName2">Full Name</label>
-                                </div>
-                                <label for="attending2">Attending</label>
+                            <div class="form-floating mb-3" id="allergiesWrapper1">
+                                <input type="text" class="form-control" id="allergies1"
+                                    placeholder="Any allergies we need to be aware of">
+                                <label for="addAllergies">Allergies / Additional Notes</label>
+                            </div>
+                        </div>
+                        <div id="additionalSubmissions2">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="rsvpName2" placeholder="Full Name" required>
+                                <label for="addFirstName2">Guest 2 - Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
                                 <select class="form-select" id="attending2" placeholder="Attending Options" required>
                                     <option value="">--Select Yes/No--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
-                                    <option value="X" hidden>X</option> 
-                                </select>      
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="songChoice2" placeholder="Song Choice">
-                                    <label for="addSongChoice2">Song Choice</label>
-                                </div>
-                                <div class="form-floating">
-                                    <select class="form-select" id="mealList2" placeholder="Meal Options" required>
-                                        <option value="">--Select Meal--</option>
-                                        <option value="L">Option 1 - Lamb</option>
-                                        <option value="C">Option 2 - Chicken</option>
-                                        <option value="V">Option 3 - Veg</option>
-                                        <option value="K">Option 4 - Kid's Meal</option>
-                                        <option value="X" hidden>X</option>
-                                    </select>
-                                    <label for="meals">Meal Options</label>
-                                </div>
-                                <select class="form-select" id="fridayevening2" placeholder="Friday Evening braai" required>
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="attending2">Attending</label>
+                            </div>
+                            <div class="form-floating mb-3" id="songChoiceWrapper2">
+                                <input type="text" class="form-control" id="songChoice2" placeholder="Song Choice">
+                                <label for="addSongChoice2">Song Choice</label>
+                            </div>
+                            <div class="form-floating mb-3" id="mealListWrapper2">
+                                <select class="form-select" id="mealList2" placeholder="Meal Options" required>
+                                    <option value="">--Select Meal--</option>
+                                    <option value="L">Option 1 - Lamb</option>
+                                    <option value="C">Option 2 - Chicken</option>
+                                    <option value="V">Option 3 - Veg</option>
+                                    <option value="K">Option 4 - Kid's Meal</option>
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="meals">Meal Options</label>
+                            </div>
+                            <div class="form-floating mb-3" id="fridayeveningWrapper2">
+                                <select class="form-select" id="fridayevening2" placeholder="Friday Evening braai"
+                                    required>
                                     <option value="">--Select Yes/No--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
-                                </select> 
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="allergies2" placeholder="Any allergies we need to be aware of">
-                                    <label for="addAllergies">Allergies</label>
-                                </div>   
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="fridayevening2">Friday Evening braai</label>
                             </div>
-                            <div id="additionalSubmissions3">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="rsvpName3" placeholder="Full Name" required>
-                                    <label for="addFirstName3">Full Name</label>
-                                </div>
-                                <label for="attending3">Attending</label>
+                            <div class="form-floating mb-3" id="allergiesWrapper2">
+                                <input type="text" class="form-control" id="allergies2"
+                                    placeholder="Any allergies we need to be aware of">
+                                <label for="addAllergies">Allergies / Additional Notes</label>
+                            </div>
+                        </div>
+                        <div id="additionalSubmissions3">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="rsvpName3" placeholder="Full Name" required>
+                                <label for="addFirstName3">Guest 3 - Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
                                 <select class="form-select" id="attending3" placeholder="Attending Options" required>
                                     <option value="">--Select Yes/No--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                     <option value="X" hidden>X</option>
-                                </select>      
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="songChoice3" placeholder="Song Choice">
-                                    <label for="addSongChoice3">Song Choice</label>
-                                </div>
-                                <div class="form-floating">
-                                    <select class="form-select" id="mealList3" placeholder="Meal Options" required>
-                                        <option value="">--Select Meal--</option>
-                                        <option value="L">Option 1 - Lamb</option>
-                                        <option value="C">Option 2 - Chicken</option>
-                                        <option value="V">Option 3 - Veg</option>
-                                        <option value="K">Option 4 - Kid's Meal</option>
-                                        <option value="X" hidden>X</option>
-                                    </select>
-                                    <label for="meals">Meal Options</label>
-                                </div>
-                                <select class="form-select" id="fridayevening3" placeholder="Friday Evening braai" required>
+                                </select>
+                                <label for="attending3">Attending</label>
+                            </div>
+                            <div class="form-floating mb-3" id="songChoiceWrapper3">
+                                <input type="text" class="form-control" id="songChoice3" placeholder="Song Choice">
+                                <label for="addSongChoice3">Song Choice</label>
+                            </div>
+                            <div class="form-floating mb-3" id="mealListWrapper3">
+                                <select class="form-select" id="mealList3" placeholder="Meal Options" required>
+                                    <option value="">--Select Meal--</option>
+                                    <option value="L">Option 1 - Lamb</option>
+                                    <option value="C">Option 2 - Chicken</option>
+                                    <option value="V">Option 3 - Veg</option>
+                                    <option value="K">Option 4 - Kid's Meal</option>
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="meals">Meal Options</label>
+                            </div>
+                            <div class="form-floating mb-3" id="fridayeveningWrapper3">
+                                <select class="form-select" id="fridayevening3" placeholder="Friday Evening braai"
+                                    required>
                                     <option value="">--Select Yes/No--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
-                                </select>  
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="allergies3" placeholder="Any allergies we need to be aware of">
-                                    <label for="addAllergies">Allergies</label>
-                                </div>  
+                                    <option value="X" hidden>X</option>
+                                </select>
+                                <label for="fridayevening3">Friday Evening braai</label>
+                            </div>
+                            <div class="form-floating mb-3" id="allergiesWrapper3">
+                                <input type="text" class="form-control" id="allergies3"
+                                    placeholder="Any allergies we need to be aware of">
+                                <label for="addAllergies">Allergies</label>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button id="rsvpBtn" type="submit" form="rsvpForm"
-                        class="btn btn-outline-primary btn-sm myBtn">SUBMIT</button>
-                    <button type="button" class="btn btn-outline-primary btn-sm myBtn"
-                        data-bs-dismiss="modal">CANCEL</button>
+                    <button id="footerBtn" type="submit" form="rsvpForm" class="btn">SUBMIT</button>
+                    <button id="footerBtn" type="button" class="btn" data-bs-dismiss="modal">CANCEL</button>
                 </div>
             </div>
         </div>
