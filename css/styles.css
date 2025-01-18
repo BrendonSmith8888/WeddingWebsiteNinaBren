@@ -5,7 +5,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    padding-top: 5rem;
+    padding-top: 5%;
     width: 100%;
 }
 
@@ -63,11 +63,6 @@ a{
 
 #mainmargin{
     color: black;
-}
-
-#mainmargin2{
-    color: black;
-    margin-top: 7%;
 }
 
 #mainh4{
@@ -143,7 +138,7 @@ a{
     background-color: #e7eaeb;
     color: #0a8d7d;
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.2vw;
+    font-size: 2vw;
     font-weight: 900;
     margin-right: 3%;
     text-align: center;
@@ -154,18 +149,285 @@ a{
     color: #e7eaeb;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    body{
+        background: #e7eaeb;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+        width: 100%;
+    }
     h1 {
         font-size: 4vw;
     }
     h3, h4, p {
         font-size: 2vw;
     }
+    #mainh4{
+        color: #0a8d7d;
+        margin-top: 4%;
+    }
     #rsvpModal{
         margin-left: 17.5%;
         width: 70%;
     }
+    #rsvpBtn{
+        font-size: 1.5vw;
+    }
+    #mainpage {
+        background-color: #e7eaeb;
+        background-image: url("./Images/BackgroundImageHome.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #ourstory{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageOurStory.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #celebrate{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageCelebrate.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+    }
+    
+    #directions{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageDirections.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #accommodation{
+        background: #0a8d7d;
+        background-image: url("../css/Images/BackgroundImageAccommodation.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #additionalinfo{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageAdditionalInfo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #presence{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImagePresence.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #rsvp{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageRSVP2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #menu{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageMenu.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #songrequest{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageSongRequests.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #thankyou{
+        background: #e7eaeb;
+        /* background-image: url("../css/Images/BackgroundImageRSVP2.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #0a8d7d;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+        width: 100%;
+    }
 }
+
+@media (max-width: 768px) {
+    body{
+        background: #e7eaeb;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+        width: 100%;
+    }
+    h1 {
+        font-size: 4vw;
+    }
+    h3, h4, p {
+        font-size: 2vw;
+    }
+    #mainh4{
+        color: #0a8d7d;
+        margin-top: 4%;
+    }
+
+    #rsvpModal{
+        margin-left: 17.5%;
+        width: 70%;
+    }
+    #rsvpBtn{
+        font-size: 1.5vw;
+    }
+    #mainpage {
+        background-color: #e7eaeb;
+        background-image: url("./Images/BackgroundImageHome.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #ourstory{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageOurStory.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #celebrate{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageCelebrate.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+    }
+    
+    #directions{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageDirections.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #accommodation{
+        background: #0a8d7d;
+        background-image: url("../css/Images/BackgroundImageAccommodation.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #additionalinfo{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageAdditionalInfo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #presence{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImagePresence.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #rsvp{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageRSVP2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #menu{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageMenu.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #songrequest{
+        background: #e7eaeb;
+        background-image: url("../css/Images/BackgroundImageSongRequests.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #thankyou{
+        background: #e7eaeb;
+        /* background-image: url("../css/Images/BackgroundImageRSVP2.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #0a8d7d;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+        width: 100%;
+    }
+    
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+  
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+  
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+  }
 
 #mainpage {
     background-color: #e7eaeb;
@@ -185,7 +447,7 @@ a{
     background-size: cover;
     margin: 0;
     padding: 0;
-    padding-top: 5rem;
+    padding-top: 5%;
 }
 
 #celebrate{
@@ -195,7 +457,7 @@ a{
     background-size: cover;
     margin: 0;
     padding: 0;
-    padding-top: 5rem;
+    padding-top: 5%;
 }
 
 #directions{
@@ -262,7 +524,7 @@ a{
     height: 100%;
     margin: 0;
     padding: 0;
-    padding-top: 5rem;
+    padding-top: 5%;
     width: 100%;
 }
 
@@ -349,6 +611,10 @@ a{
 #rsvpBtn:hover, #footerBtn:hover{
     background-color: #0a8d7d;
     color: #e7eaeb;
+}
+
+#rsvpBtn{
+    font-size: 1.5vw;
 }
 
 #footerBtn{

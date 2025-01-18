@@ -1,7 +1,15 @@
   $(document).ready(function () {
     $("#rsvpBtn").on("click", function () {
       $("#rsvpModal").modal("show");
-    });
+      for (let i = 1; i <= 3; i++) {
+          $(`#rsvpName${i}`).val("X");
+          $(`#attending${i}`).val("X");
+          $(`#songChoice${i}`).val("X");
+          $(`#mealList${i}`).val("X");
+          $(`#fridayevening${i}`).val("X");
+          $(`#allergies${i}`).val("X");
+        }
+      });
 
     $("#attending").on("change", function () {
       let attendingvalue = $(this).val();
