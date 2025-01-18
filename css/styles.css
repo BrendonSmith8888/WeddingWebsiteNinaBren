@@ -161,6 +161,10 @@ a{
     h3, h4, p {
         font-size: 2vw;
     }
+    #rsvpModal{
+        margin-left: 17.5%;
+        width: 70%;
+    }
 }
 
 #mainpage {
@@ -345,6 +349,12 @@ a{
 #rsvpBtn:hover, #footerBtn:hover{
     background-color: #0a8d7d;
     color: #e7eaeb;
+}
+
+#footerBtn{
+    font-size: 1.5vw;
+    float: left;
+    width: 100%;
 }
 
 #tyBtn{
