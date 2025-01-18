@@ -9,18 +9,34 @@ body{
     width: 100%;
 }
 
-h1, p{
+h1{
     color: black;
-    margin: 3%;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5vw;
+    font-weight: 100;
+    margin-top: 3%;
+}
+
+h2{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+}
+
+h3{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.3vw;
+}
+
+h4{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2vw;
 }
 
 p{
+    color: black;
     font-family: "Forum", serif;
-}
-
-h1, h2, h3, h4{
-    font-family: "Cormorant Garamond", serif;
-    font-weight: bold;
+    font-size: 2vw;
+    margin: 0.5%;
 }
 
 button{
@@ -32,26 +48,80 @@ button{
     width: 20%;
 }
 
+ul{
+    color: black;
+    font-family: "Forum", serif;
+    font-size: 1.5vw;
+}
+
+a{
+    color: black;
+    font-family: "Forum", serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
 #mainmargin{
     color: black;
-    margin: 5%;
+}
+
+#mainmargin2{
+    color: black;
+    margin-top: 7%;
 }
 
 #mainh4{
     color: #0a8d7d;
-    margin-top: 3%;
+    margin-top: 8%;
 }
 
-h1{
-    font-size: 5vw;
+#directionsh4{
+    margin-bottom: 5%;
+    text-decoration: underline;
 }
 
-h3{
-    font-size: 3vw;
+#rsvph4{
+    color: #0a8d7d;
 }
 
-h4, p{
-    font-size: 2vw;
+#coords{
+    padding-top: 1%;
+}
+
+#directionsh1{
+    font-size: 2.3vw;
+    margin-bottom: 2%;
+    margin-right: 1%;
+    margin-top: 6%;
+}
+
+#pcol1{
+    margin: 0.1%;
+    width: 90%;
+}
+
+#pcol2{
+    margin: 0.1%;
+    margin-left: 3%;
+    width: 100%;
+}
+
+#accomodationh1{
+    font-size: 2.9vw;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    padding-top: 8%;
+}
+
+#aih1{
+    font-size: 3.5vw;
+    margin-bottom: 5%;
+    padding-top: 4%;
+}
+
+.aih3{
+    margin-bottom: 4%;
+    margin-top: 4%;
 }
 
 .container{
@@ -65,6 +135,18 @@ h4, p{
     font-family: "Cormorant Garamond", serif;
     font-size: 1.4vw;
     font-weight: 900;
+}
+
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1030
+}
+
+.nav-link:hover{
+    background-color: #0a8d7d;
+    color: #e7eaeb;
 }
 
 @media (max-width: 768px) {
@@ -112,13 +194,19 @@ h4, p{
     background-image: url("../css/Images/BackgroundImageDirections.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 #accommodation{
-    background: #e7eaeb;
+    background: #0a8d7d;
     background-image: url("../css/Images/BackgroundImageAccommodation.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 #additionalinfo{
@@ -194,18 +282,17 @@ h4, p{
     margin-top: 5%;
 }
 
+#presencep1{
+    margin-top: 5%;
+}
+
 .ourstoryp{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Forum", serif;
     font-size: 1.5vw;
 }
 
-ul{
-    color: black;
-    font-size: 2vw;
-    font-weight: bold;
-}
-
 #accommodationlist{
+    font-family: "Forum", serif;
     list-style: none;
     text-align: left;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,14 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Forum&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Forum&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="../css/Icons/favicon.ico" type="image/x-icon">
     <title>Directions</title>
 </head>
-<body id="directions">
+<body>
     <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <div class="container">
@@ -35,31 +38,38 @@
                 </ul>
             </div>
         </nav>
-        <div class="container">
-            <h1>DIRECTIONS</h1>
+    </header>
+    <section id="directions">
+        <div class="container" id="coords">
+            <h1 id="directionsh1">DIRECTIONS</h1>
             <p>S 29° 19′ 8.4″</p>
             <p>E 30° 04′ 57″</p>
             <p>1550m</p>
         </div>
-    </header>
-    <main>
-        <section id="directions">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col align-items-center">
-                    <h4>From Joburg</h4>
-                    <p>ETA: 4 HOURS 15 MINS</p>
-                    <p>Take Exit 132 from the N3 Southbound. Turn left past the petrol station and the Linga Lapa (with
-                        Biltong written on the roof). The road becomes a gravel road and proceeds straight along it for just
-                        over 4kms You will pass Thatchings guesthouse after 2kms. After another 2kms you will see Providence
+                    <h4 id="directionsh4">From Joburg</h4>
+                    <p id="pcol1">ETA: 4 HOURS 15 MINS</p>
+                    <p id="pcol1">Take Exit 132 from the N3 Southbound. Turn left past the petrol station and the
+                        Linga Lapa
+                        (with
+                        Biltong written on the roof). The road becomes a gravel road and proceeds straight along it
+                        for just
+                        over 4kms You will pass Thatchings guesthouse after 2kms. After another 2kms you will see
+                        Providence
                         Country Estate on the right-hand side.</p>
                 </div>
                 <div class="col align-items-center">
-                    <h4>From Durban</h4>
-                    <p>ETA: 1 HOUR 15 MINS</p>
-                    <p>Take Exit 132 from the N3 northbound. Turn left back over the freeway and pass the petrol station and
-                        the Linga Lapa (with Biltong written on the roof). The road becomes a gravel road and proceeds
-                        straight along it for just over 4kms. You will pass Thatchings guesthouse after 2kms. After another
+                    <h4 id="directionsh4">From Durban</h4>
+                    <p id="pcol2">ETA: 1 HOUR 15 MINS</p>
+                    <p id="pcol2">Take Exit 132 from the N3 northbound. Turn left back over the freeway and pass the
+                        petrol
+                        station and
+                        the Linga Lapa (with Biltong written on the roof). The road becomes a gravel road and
+                        proceeds
+                        straight along it for just over 4kms. You will pass Thatchings guesthouse after 2kms. After
+                        another
                         2kms you will see Providence Country Estate on the right-hand side.</p>
                 </div>
             </div>
@@ -67,61 +77,75 @@
     </section>
     <section id="accommodation">
         <div class="container">
-            <h1>Accommodation</h1>
+            <h1 id="accomodationh1">Accommodation</h1>
             <div class="row justify-content-center">
-                <div class="col align-items-center">
-                    <img id="accommodationimg" src="../css/Images/accommodation.jpg" alt="Accommodation Photo">
-                </div>
-                <div class="col-8 align-items-center">
-                    <p>At Providence, we have blocked out some rooms for guests. Please contact us to find out the
-                        availability of rooms.</p>
-                    <ul id="accommodationlist">There are also several guesthouses & BnBs in the area:
-                        <li><a href="https://waterwoodfarm.co.za/" target="_blank">Waterwood</a></li>
-                        <li><a href="https://www.troutbagger.com/" target="_blank">Troutbagger</a></li>
-                        <li><a href="https://book.nightsbridge.com/17303?special=BOOKDIRECTWEEKDAY24" target="_blank">Thatchlings Guest House</a></li>
-                        <li>Hadfield House (Eaglescrest - 2km from Providence)</li>
-                        <ul>
-                            <li>Self catering villa - 2 units</li>
-                            <li>Price range: R1200 - R1800 per room</li>
-                            <li>Email: nicola@nicolahadfield.co.za</li>
-                            <li>Cel: 083 375 0162</li>
+                <p>At Providence, we have blocked out some rooms for guests. Please contact us to find out the
+                    availability of rooms.</p>
+                    <div class="col align-items-center">
+                        <ul id="accommodationlist">There are also several guesthouses & BnBs in the area (The list
+                            below are clickable links):
+                            <li><a href="https://waterwoodfarm.co.za/" target="_blank">Waterwood</a></li>
+                            <li><a href="https://www.troutbagger.com/" target="_blank">Troutbagger</a></li>
+                            <li><a href="https://book.nightsbridge.com/17303?special=BOOKDIRECTWEEKDAY24"
+                                    target="_blank">Thatchlings Guest House</a></li>
+                            <li><a href="https://kildarecottages.co.za/" target="_blank">Kildare Cottages</a>
+                            </li>
+                            <li><a href="https://www.farsidefarm.co.za/" target="_blank">Farside Farm</a></li>
+                            <li><a href="https://www.brahmanhills.co.za/" target="_blank">Brahman Hills</a></li>
+                            <li><a href="https://fordoun.com/" target="_blank">Fordoun Hotel & Spa</a></li>
+                            <li><a href="https://www.wvmanor.com/?utm_source=gmb&utm_medium=organic&utm_content=listing&utm_campaign=gmb"
+                                    target="_blank">Thyme Out Weltevreden Farm</a></li>
+                            <li><a href="https://www.gowrie.co.za/" target="_blank">Gowrie Farm</a></li>
+                            <li><a href="https://www.nottieshotel.co.za/" target="_blank">Nottingham Road
+                                    Hotel</a>
+                            </li>
+                            <li><a href="https://boschhoek.co.za/" target="_blank">29 Bosch Hoek</a></li>
                         </ul>
-                        <li>La Loggia (Eaglescrest - 2km from Providence)</li>
-                        <ul>
-                            <li>Self catering rooms</li>
-                            <li>Price range: R1100 per room</li>
-                            <li>Email: pdp@iafrica.com</li>
-                            <li>Cel: 083 654 7997 / 083 661 2511</li>
+                    </div>
+                    <div class="col align-items-center">
+                        <ul id="accommodationlist">
+                            <li>Hadfield House (Eaglescrest - 2km from Providence)</li>
+                            <ul>
+                                <li>Self catering villa - 2 units</li>
+                                <li>Price range: R1200 - R1800 per room</li>
+                                <li>Email: nicola@nicolahadfield.co.za</li>
+                                <li>Cel: 083 375 0162</li>
+                            </ul>
+                            <li>La Loggia (Eaglescrest - 2km from Providence)</li>
+                            <ul>
+                                <li>Self catering rooms</li>
+                                <li>Price range: R1100 per room</li>
+                                <li>Email: pdp@iafrica.com</li>
+                                <li>Cel: 083 654 7997 / 083 661 2511</li>
+                            </ul>
                         </ul>
-                        <li>Mansfield Manor (3.7kms from Providence)</li>
-                        <ul>
-                            <li>Self catering main house which sleeps 10 and self catering cottage which sleeps 6</li>
-                            <li>Price range: R800 - R1000</li>
-                            <li>Email: pdp@iafrica.com</li>
-                            <li>Cel: 083 654 7997 / 083 661 2511</li>
+                    </div>
+                    <div class="col align-items-center">
+                        <ul id="accommodationlist">
+                            <li>Mansfield Manor (3.7kms from Providence)</li>
+                            <ul>
+                                <li>Self catering main house which sleeps 10 and self catering cottage which
+                                    sleeps
+                                    6
+                                </li>
+                                <li>Price range: R800 - R1000</li>
+                                <li>Email: pdp@iafrica.com</li>
+                                <li>Cel: 083 654 7997 / 083 661 2511</li>
+                            </ul>
+                            <li>56B Gowrie Village (12km from Providence)</li>
+                            <ul>
+                                <li>self-catering apartment - sleeps 4</li>
+                                <li>Email: jennyjhenderson@gmail.com</li>
+                                <li>Tel: 072 3021 6946</li>
+                            </ul>
                         </ul>
-                        <li><a href="https://kildarecottages.co.za/" target="_blank">Kildare Cottages</a></li>
-                        <li><a href="https://www.farsidefarm.co.za/" target="_blank">Farside Farm</a></li>
-                        <li><a href="https://www.brahmanhills.co.za/" target="_blank">Brahman Hills</a></li>
-                        <li><a href="https://fordoun.com/" target="_blank">Fordoun Hotel & Spa</a></li>
-                        <li><a href="https://www.wvmanor.com/?utm_source=gmb&utm_medium=organic&utm_content=listing&utm_campaign=gmb" target="_blank">Thyme Out Weltevreden Farm</a></li>
-                        <li><a href="https://www.gowrie.co.za/" target="_blank">Gowrie Farm</a></li>
-                        <li>56B Gowrie Village (12km from Providence)</li>
-                        <ul>
-                            <li>self-catering apartment - sleeps 4</li>
-                            <li>Email: jennyjhenderson@gmail.com</li>
-                            <li>Tel: 072 3021 6946</li>
-                        </ul>
-                        <li><a href="https://www.nottieshotel.co.za/" target="_blank">Nottingham Road Hotel</a></li>
-                        <li><a href="https://boschhoek.co.za/" target="_blank">29 Bosch Hoek</a></li>
-                    </ul>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
-    </main>
     <script src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 </body>
+
 </html>
