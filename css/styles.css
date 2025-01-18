@@ -129,19 +129,24 @@ a{
     width: 100%;
 }
 
+.navbar{
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    position: fixed;
+    text-align: end;
+    top: 0;
+    width: 100%;
+}
+
 .nav-link {
     background-color: #e7eaeb;
     color: #0a8d7d;
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     font-weight: 900;
-}
-
-.navbar{
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    z-index: 1030
+    margin-right: 3%;
+    text-align: center;
 }
 
 .nav-link:hover{
@@ -262,7 +267,7 @@ a{
 }
 
 #celebrateimg{
-    margin-top: 30%;
+    margin-top: 20%;
     width: 100%;
 }
 
